@@ -2,7 +2,7 @@
   "name": "lvcheng",
   "version": "1.0.0",
   "description": "lvchengxiaozhen",
-  "author": "LinHuiFeng <linhuifengweb@gmail.com>",
+  "author": "WuXiaohong <wxh16144@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --host 0.0.0.0 --progress --config build/webpack.dev.conf.js",

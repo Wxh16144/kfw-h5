@@ -27,16 +27,16 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ?
+      config.build.assetsPublicPath :
+      config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'img':resolve('src/assets/images')
+      'img': resolve('src/assets/images')
     }
   },
   module: {
@@ -50,7 +50,16 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [
+          resolve('src'),
+          resolve('test'),
+          resolve('node_modules/webpack-dev-server/client'),
+          //参考地址 https://note.52admin.net/2018/09/10/Vue-js-%E4%BD%BF%E7%94%A8-Swiper-js-%E5%9C%A8-iOS%E5%B0%8F%E4%BA%8E11-%E6%97%B6%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF/
+          // swiper 打包
+          resolve('node_modules/swiper'),
+          resolve('node_modules/dom7'),
+          resolve('node_modules/ssr-window')
+        ]
       },
       {
         test: /\.scss$/,
