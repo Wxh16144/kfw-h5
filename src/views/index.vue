@@ -5,6 +5,8 @@
         <h1 class="ani animated"
                 swiper-animate-effect="swing"
                 swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">index page{{ item }}</h1>
+        <h2>{{  msg }}</h2>
+
       </div>
     </div>
   </div>
@@ -12,7 +14,7 @@
 
 <script>
 import Swiper from 'swiper' // 在app.vue引入
-
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'index',
   data () {
@@ -21,7 +23,11 @@ export default {
 
   components: {},
 
-  computed: {},
+  computed: {
+    ...mapState({
+      msg: state => state.msg
+    })
+  },
 
   mounted () {
     new Swiper('.swiper-container', {

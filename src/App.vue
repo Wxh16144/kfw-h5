@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1> {{ title }} </h1>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -8,11 +9,18 @@
 
 <script>
 
-
 export default {
   name: 'App',
+  data () {
+    return {
+      title: this.$store.state.title
+    }
+  },
   components: {
-    
+
+  },
+  mounted () {
+
   }
 }
 </script>
