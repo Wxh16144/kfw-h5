@@ -12,7 +12,7 @@ const router = new VueRouter({
     {
       path: "/",
       name:'index',
-      component:  (res) => require(['@/views/index'],res)
+      component:  ()=> import('@/views/index')
     }
   ]
 })
