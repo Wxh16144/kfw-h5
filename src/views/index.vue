@@ -44,6 +44,11 @@ export default {
     });
     setTimeout(() => {
       this.$loading.close();
+      this.$toast({
+        message: '测试失败',
+        iconClass: 'iconfont icon-error',
+        duration: 1000
+      })
     }, 1000);
 
     /* eslint-disable*/

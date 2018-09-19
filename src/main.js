@@ -11,7 +11,7 @@ import store from './store'
 //axios 
 import '@/plugins'
 // rem
-import '@/plugins/rem.js'
+// import '@/plugins/rem.js'
 //mint-ui
 import '@/plugins/mintui.js'
 
