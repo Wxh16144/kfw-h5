@@ -46,8 +46,15 @@ export default {
       this.$loading.close();
       this.$toast({
         message: '测试失败',
-        iconClass: 'iconfont icon-error',
+        iconClass:'iconfont icon-success', //'iconfont icon-error',
         duration: 1000
+        // ' mintui mintui-more ' 
+        // ' mintui mintui-back ' 
+        // ' mintui mintui-search ' 
+        // ' mintui mintui-field-error ' 
+        // ' mintui mintui-field-warning ' 
+        // ' mintui mintui-success ' 
+        // ' mintui mintui-field-success ' 
       })
     }, 1000);
 
