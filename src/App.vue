@@ -45,8 +45,6 @@ export default {
 <style lang="scss">
   // 动画css
   @import url('./assets/css/animate.min.css');
-  // iconfont图标css
-  @import url('../static/iconfont/iconfont.css');
 
   *{
     margin: 0;
