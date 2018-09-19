@@ -11,10 +11,13 @@ import store from './store'
 //axios 
 import '@/plugins'
 // rem
-// import '@/plugins/rem.js'
+import '@/plugins/rem.js'
+
+// iconfont图标css
+import '../static/iconfont/iconfont.css'
 //mint-ui
 import '@/plugins/mintui.js'
-
+import 'mint-ui/lib/style.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
