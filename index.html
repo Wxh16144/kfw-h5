@@ -4,17 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-  <title>模板</title>
+  <!-- wxjssdk -->
+  <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <!-- muit-ui -->
+  <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+  <!-- swiper-js -->
   <script src="./static/js/swiper.animate1.0.3.min.js"></script>
+  <!-- Viewport Units BuggyfilLl -->
+  <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+  <!-- debugger -->
+  <script src="./static/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole();
+    console.log('Hello Vconsole');
+  </script>
+
+  <!-- init -->
+  <script>
+    window.onload = function () {
+      window.viewportUnitsBuggyfill.init({
+        hacks: window.viewportUnitsBuggyfillHacks
+      })
+      var height = document.documentElement.clientHeight + 'px'
+      document.querySelector('body').style.height = height
+      window.addEventListener('resize', function (param) {
+        var height = document.documentElement.clientHeight + 'px'
+        document.querySelector('body').style.height = height
+      })
+    }
+
+  </script>
+
+  <title>模板</title>
 </head>
 
 <body>
-  <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
-  <script>
-    window.onload = function () {
-      window.viewportUnitsBuggyfill.init({ hacks: window.viewportUnitsBuggyfillHacks });
-    }
-  </script>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>
