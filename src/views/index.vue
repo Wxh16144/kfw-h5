@@ -45,7 +45,7 @@ export default {
     setTimeout(() => {
       this.$loading.close();
       this.$toast({
-        message: '测试失败',
+        message: '测试成功',
         iconClass:'iconfont icon-success', //'iconfont icon-error',
         duration: 1000
         // ' mintui mintui-more ' 
