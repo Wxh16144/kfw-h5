@@ -19,7 +19,8 @@
 <script>
 export default {
   name: 'Landscape',
-  props: {},
+  props: {
+  },
   data () {
     return {
       play: true
@@ -74,10 +75,10 @@ export default {
   z-index:1002;
 }
 .player {
-  position: relative;
+  position: absolute;
+  top: 20px;
+  left:20px;
   z-index: 998;
-  left: 50px;
-  top: 45px;
   font-size: 2.8em;
   text-align: center;
   animation: rotatePlay 2s infinite linear;
@@ -103,7 +104,6 @@ export default {
   0% {
     transform: rotate(0);
   }
-
   100% {
     transform: rotate(360deg);
   }

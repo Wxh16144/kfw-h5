@@ -53,7 +53,7 @@ export default {
     display: inline-block;
     width: 67px;
     height: 109px;
-    background-image: url("../../static/phone.png");
+    background-image: url("~@/assets/images/phone.png");
     transform: rotate(90deg);
     animation: rotation infinite 1.5s ease-in-out;
     background-size: 67px 109px;
