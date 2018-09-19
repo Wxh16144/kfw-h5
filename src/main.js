@@ -3,14 +3,19 @@
 import Vue from 'vue'
 import App from './App'
 
-import router from './router'
 
+// vue-router
+import router from './router'
 //vuex
 import store from './store'
+//axios 
+import '@/plugins'
+// rem
+import '@/plugins/rem.js'
+//mint-ui
+import '@/plugins/mintui.js'
 
 Vue.config.productionTip = false
-
-
 
 /* eslint-disable no-new */
 new Vue({
