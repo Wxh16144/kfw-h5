@@ -6,9 +6,9 @@ import App from './App'
 
 // vue-router
 import router from './router'
-//vuex
+// vuex
 import store from './store'
-//axios 
+// axios 
 import '@/plugins'
 // rem
 import '@/plugins/rem.js'
