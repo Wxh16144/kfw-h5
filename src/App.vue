@@ -14,6 +14,7 @@ import music from '@/components/music.vue'
 import phone from '@/components/phone.vue'
 
 // 微信api
+/* eslint-disable*/
 import wxConfig from '@/plugins/wxConfig.js'
 
 /* eslint-disable*/
@@ -34,10 +35,11 @@ export default {
     })
   },
   mounted () {
-    wxConfig.call(this)
-
+    // 微信配置 包括分享标题 连接 图片
+    // wxConfig.call(this)
     // 执行 vuex里面的检查活动是否过期
-    this.$store.dispatch('checkActivity', this)
+    // this.$store.dispatch('checkActivity', this)
+    // 执行 vuex 里面检查用户是否授权
   }
 }
 </script>

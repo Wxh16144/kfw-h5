@@ -1,7 +1,7 @@
 <template>
 <div id='index' class="swiper-container">
   <div  class="swiper-wrapper">
-      <div class="swiper-slide" v-for="item in 5" :key="item">
+      <div class="swiper-slide" v-for="item in 1" :key="item">
         <h1 class="ani animated"
                 swiper-animate-effect="swing"
                 swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">index page{{ item }}</h1>
