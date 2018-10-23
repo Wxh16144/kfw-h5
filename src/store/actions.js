@@ -19,12 +19,12 @@ export const checkActivity = async (context, self) => {
       }
     } = response
     // 获取活动开始时间戳和结束时间戳
-    const {
-      startdate,
-      enddate
-    } = param
+    const { startdate, enddate } = param
     // 获取现在的时间戳
-    const Datenow = Date.now().toString().substr(0, 10) - 0
+    const Datenow =
+      Date.now()
+        .toString()
+        .substr(0, 10) - 0
 
     if (Datenow > enddate) {
       myAlert('活动已经结束')
