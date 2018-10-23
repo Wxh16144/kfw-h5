@@ -29,9 +29,9 @@ export default {
   components: {
     music, phone
   },
-  computed:{
+  computed: {
     ...mapState({
-     activityStatus: state => state.activityStatus
+      activityStatus: state => state.activityStatus
     })
   },
   mounted () {
@@ -45,14 +45,32 @@ export default {
 </script>
 
 <style lang="scss">
-  // 动画css
-  @import url('./assets/css/animate.min.css');
-
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  #app{
-    background-color: #eee
-  }
+// 动画css
+@import url('./assets/css/animate.min.css');
+body{
+  background-color: #eee;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  background-color: #eee;
+}
+// 如果需要添加自定义字体
+/*完美解决css3 web-safe字体各种浏览器兼容问题*/
+@font-face {
+  font-family: 'myfont'; /*定义字体名称*/
+  src: url('./assets/font/fzylhjt.eot'); /*兼容eot*/
+  src: url('./assets/font/fzylhjt.eot?#iefix') format('embedded-opentype'),
+    url('./assets/font/fzylhjt.woff2') format('woff2'),
+    url('./assets/font/fzylhjt.woff') format('woff'),
+    /*火狐支持woff,woff2,opentype字体*/ url('./assets/font/fzylhjt.ttf')
+      format('truetype'),
+    /*基于webkit内核支持truetype字体*/
+      url('./assets/font/fzylhjt.svg#abandoned_bitplaneregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: ultra-expanded; /*定义字体符合拉伸*/
+}
 </style>
