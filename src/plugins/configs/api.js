@@ -3,7 +3,7 @@ export default {
   baseUrl: 'http://mp.kfw001.com/',
   // 接口文档地址
   api: {
-    apiForAuth: 'http://api.mp.kfw001.com/auth/wechat/getMember', //获取微信头像信息接口
+    apiForAuth: 'http://api.mp.kfw001.com/auth/wechat/getMember', // 获取微信头像信息接口
     // apiForConfig: 'http://game.kfw001.com/game/index.php?s=share/index',
     apiForConfig: 'http://api.mp.kfw001.com/auth/wechat/jssdk', // 获取分享接口
     apiForShare: 'http://game.kfw001.com/game/index.php?s=vote/info',
