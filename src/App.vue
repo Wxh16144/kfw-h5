@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <music></music>
-    <phone></phone>
+    <!-- 音乐组件 -->
+    <music />
+    <!-- 手机旋转提示 -->
+    <phone />
+    <!-- 箭头组件 -->
+    <arrows />
+
     <h3>活动状态: {{ activityStatus }} </h3>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
@@ -12,7 +17,7 @@
 <script>
 import music from '@/components/music.vue'
 import phone from '@/components/phone.vue'
-
+import arrows from '@/components/arrow.vue'
 // 微信api
 /* eslint-disable*/
 import wxConfig from '@/plugins/wxConfig.js'
@@ -27,7 +32,7 @@ export default {
     }
   },
   components: {
-    music, phone
+    music, phone ,arrows
   },
   computed: {
     ...mapState({
@@ -48,7 +53,7 @@ export default {
 // 动画css
 @import url('./assets/css/animate.min.css');
 body{
-  background-color: #eee;
+  background-color: #989898;
 }
 * {
   margin: 0;
@@ -56,21 +61,5 @@ body{
 }
 #app {
   background-color: #eee;
-}
-// 如果需要添加自定义字体
-/*完美解决css3 web-safe字体各种浏览器兼容问题*/
-@font-face {
-  font-family: 'myfont'; /*定义字体名称*/
-  src: url('./assets/font/fzylhjt.eot'); /*兼容eot*/
-  src: url('./assets/font/fzylhjt.eot?#iefix') format('embedded-opentype'),
-    url('./assets/font/fzylhjt.woff2') format('woff2'),
-    url('./assets/font/fzylhjt.woff') format('woff'),
-    /*火狐支持woff,woff2,opentype字体*/ url('./assets/font/fzylhjt.ttf')
-      format('truetype'),
-    /*基于webkit内核支持truetype字体*/
-      url('./assets/font/fzylhjt.svg#abandoned_bitplaneregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: ultra-expanded; /*定义字体符合拉伸*/
 }
 </style>
