@@ -1,6 +1,6 @@
 export const checkActivity = async (context, self) => {
   const myAlert = msg => {
-    context.commit('update_activityStatus', false)
+    context.commit('updateActivityStatus', false)
     self.$toast({
       message: msg,
       iconClass: 'iconfont icon-error',
