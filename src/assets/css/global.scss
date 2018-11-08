@@ -1,0 +1,94 @@
+// 背景花色
+@mixin bg {
+  overflow: hidden;
+  // background-image: url('~@/assets/images/logo.png'),
+  //   url('~@/assets/images/bottom.png'), url('~@/assets/images/big_bg.png');
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: center bottom, 0 bottom, 0 top;
+  background-size: 200px, contain, 60%;
+  height: 100%;
+  width: 100%;
+}
+$themeColor: rgba(254, 138, 3, 1);
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-1deg) scale(1, 1);
+    transform-origin: left center;
+  }
+  50% {
+    transform: rotate(1deg) scale(1, 1.05);
+    transform-origin: left center;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: darken($themeColor, 30);
+}
+:-moz-placeholder {
+  color: darken($themeColor, 30);
+}
+::-moz-placeholder {
+  color: darken($themeColor, 30);
+}
+:-ms-input-placeholder {
+  color: darken($themeColor, 30);
+}
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button {
+  -webkit-appearance: none;
+}
+
+.btn {
+  // font-family: fzylhjt;
+  color: darken($themeColor, 30);
+  user-select: none;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to left,
+    #fe6804,
+    #ffad00
+  ); //url("./assets/images/btn_bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: transform 0.2s;
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+// 如果需要添加自定义字体
+/*完美解决css3 web-safe字体各种浏览器兼容问题*/
+// @font-face {
+//   font-family: 'myfont'; /*定义字体名称*/
+//   src: url('./assets/font/fzylhjt.eot'); /*兼容eot*/
+//   src: url('./assets/font/fzylhjt.eot?#iefix') format('embedded-opentype'),
+//     url('./assets/font/fzylhjt.woff2') format('woff2'),
+//     url('./assets/font/fzylhjt.woff') format('woff'),
+//     /*火狐支持woff,woff2,opentype字体*/ url('./assets/font/fzylhjt.ttf')
+//       format('truetype'),
+//     /*基于webkit内核支持truetype字体*/
+//       url('./assets/font/fzylhjt.svg#abandoned_bitplaneregular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: ultra-expanded; /*定义字体符合拉伸*/
+// }
+
+// @keyframes swing {
+//   0%,
+//   100% {
+//     transform: rotate(-2.5deg) scale(1, 1);
+//     transform-origin: left top;
+//   }
+//   50% {
+//     transform: rotate(5deg) scale(1, 1.05);
+//     transform-origin: left top;
+//   }
+// }
