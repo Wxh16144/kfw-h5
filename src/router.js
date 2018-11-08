@@ -19,6 +19,14 @@ const router = new VueRouter({
       component: () => import('@/components/token')
     },
     {
+      path: '/test',
+      name: 'test',
+      meta: {
+        requiresAuth: true,
+        desc: '需要授权'
+      }
+    },
+    {
       path: '*',
       redirect: {
         name: 'index'
@@ -46,6 +54,9 @@ router.beforeEach((to, from, next) => {
     })
     window.localStorage.setItem('token_timestamp', new Date().getTime())
     window.location.href = `${baseURL}?${urlParams}`
+  } else if (to.matched.some(record => record.meta.requiresAuth)) {
+    alert(to['meta']['desc'] || '地址无效')
+    next({ path: '/' }) // 回到首页
   } else {
     next()
   }
