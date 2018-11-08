@@ -10,12 +10,13 @@ import axios from 'axios'
 // import systems from '@/configs'
 import configs from '../../configs/api'
 
-const {baseUrl} = configs
+const { baseUrl } = configs
 // 确认默认链接
 axios.defaults.baseURL = baseUrl
 
 // 初始化post header
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+axios.defaults.headers.post['Content-Type'] =
+  'application/x-www-form-urlencoded'
 // axios.defaults.withCredentials = true;
 
 /*
@@ -27,7 +28,7 @@ axios.defaults.transformRequest = function _transformRequest (params = {}) {
   const auth = localStorage.getItem('auth')
   // Object.assign({auth: auth}, params);
   // 返回完整数据，请求ajax
-  return Qs.stringify(Object.assign({auth: auth}, params))
+  return Qs.stringify(Object.assign({ auth: auth }, params))
 }
 
 /*

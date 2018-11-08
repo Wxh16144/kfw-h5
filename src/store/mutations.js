@@ -1,3 +1,3 @@
-export const update_activityStatus = (store, status = false) => {
+export const updateActivityStatus = (store, status = false) => {
   store.activityStatus = status
 }
