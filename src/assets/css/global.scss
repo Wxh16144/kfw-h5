@@ -10,7 +10,7 @@
   width: 100%;
 }
 $themeColor: rgba(254, 138, 3, 1);
-
+// 摇摆动画
 @keyframes swing {
   0%,
   100% {
@@ -22,7 +22,13 @@ $themeColor: rgba(254, 138, 3, 1);
     transform-origin: left center;
   }
 }
+//  解决移动端iPhone设备点击时出现半透明的灰色背景
+html,
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
+// 修改输入框的提示颜色
 ::-webkit-input-placeholder {
   color: darken($themeColor, 30);
 }
@@ -36,12 +42,14 @@ $themeColor: rgba(254, 138, 3, 1);
   color: darken($themeColor, 30);
 }
 
+// 取消input按钮默认样式
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
 button {
   -webkit-appearance: none;
 }
+
 
 .btn {
   // font-family: fzylhjt;

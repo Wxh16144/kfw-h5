@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 
+// 百度统计
+import '@/plugins/baidutongji.js'
+
 // vue-router
 import router from './router'
 // vuex
