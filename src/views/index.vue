@@ -3,7 +3,7 @@
        class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide"
-           v-for="item in 1"
+           v-for="item in 3"
            :key="item">
         <h1 class="ani animated"
             swiper-animate-effect="swing"
@@ -102,10 +102,18 @@ h1 {
   // color: red;
   color: $themeColor;
 }
+#index{
+  height: 100vh;
+}
 .swiper-container {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .swiper-wrapper {
+  height: 100%;
+}
+.swiper-slide{
   height: 100%;
 }
 .box {

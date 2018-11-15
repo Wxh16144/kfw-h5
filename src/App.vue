@@ -7,7 +7,7 @@
     <!-- 箭头组件 -->
     <arrows />
 
-    <h3>活动状态: {{ activityStatus }} </h3>
+    <!-- <h3>活动状态: {{ activityStatus }} </h3> -->
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -61,5 +61,6 @@ body{
 }
 #app {
   background-color: #eee;
+  height: 100%;
 }
 </style>
