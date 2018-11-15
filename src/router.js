@@ -36,6 +36,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  return next()
   const _time = window.localStorage.getItem('token_timestamp') || 0
   if (
     (window.localStorage.getItem('auth') === null && to.name !== 'token') ||
