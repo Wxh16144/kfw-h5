@@ -26,7 +26,7 @@ export default {
     0%,
     30% {
       opacity: 0;
-      transform: translate(0, 10px);
+      transform: translate(0, 20px);
     }
     60% {
       opacity: 1;
@@ -34,7 +34,7 @@ export default {
     }
     100% {
       opacity: 0;
-      transform: translate(0, -8px);
+      transform: translate(0, -16px);
     }
   }
 }
